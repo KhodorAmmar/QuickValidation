@@ -1,0 +1,72 @@
+﻿<!doctype html>
+<html>
+<head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+    </header>
+    <div id="main">
+	 <form >
+                <div>
+                    <label for="name">Name</label>
+                    <div>
+                        <input type="text" id="name" placeholder="Name" data-required="true">
+                        <span class="help-inline"></span>
+                    </div>
+                </div>
+                <div>
+                    <label for="username">Username</label>
+                    <div>
+                        <input type="text" id="username" placeholder="Username" data-required="true">
+                        <span class="help-inline"></span>
+                    </div>
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <div>
+                        <input type="text" id="email" placeholder="Email" data-required="true" data-email="true">
+                        <span class="help-inline"></span>
+                    </div>
+                </div>
+                <div >
+                    <label for="password">Password</label>
+                    <div>
+                        <input type="password" id="password" placeholder="Password" data-required="true" data-password="true">
+                        <span class="help-inline"></span>
+                    </div>
+                </div>
+                <div>
+                    <label for="cpassword">Confirm</label>
+                    <div>
+                        <input type="password" id="cpassword" placeholder="Password" data-required="true" data-match="true" data-matchwith="password">
+                        <span class="help-inline"></span>
+                    </div>
+                </div>
+                <div>
+                    <label for="type">Type</label>
+                    <div >
+                        <select id="type" data-required="true">
+                            <option value="1">Supervisor</option>
+                            <option value="2">Engineer</option>
+                        </select>
+                        <span class="help-inline"></span>
+                    </div>
+                </div>
+				<div>
+					<button id='save'>Save</button>
+				</div>
+            </form>
+    </div>
+    <footer id="footer">
+    </footer>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="js/quick.js"></script>
+	<script>
+		$(function(){
+			$("#save").click(function(){ alert($("form").validate()); return false;});
+		});
+	</script>
+</body>
+</html>

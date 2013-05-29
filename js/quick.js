@@ -58,6 +58,6 @@
         return /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/.test(s);
     }
     function ValidateTime(s) {
-        return /^(0?[1-9]|1[012])(:[0-5]\d)( [APap][mM])?$/.test(s);
+        return /^(0?[1-9]|1[0-9]|2[0-3])(:[0-5]\d)( [APap][mM])?$/.test(s);
     }
 })(jQuery);
